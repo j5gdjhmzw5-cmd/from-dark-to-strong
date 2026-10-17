@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROM DARK TO STRONG</title>
+    <style>
+        body {
+            background-color: #0f0f13;
+            color: #f0f0f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #1a1a24;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            border: 1px solid #3b2854;
+        }
+        h1 {
+            color: #b19cd9;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #b8b8cc;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: linear-gradient(135deg, #4a154b, #7b2cbf);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(123, 44, 191, 0.4);
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #5c1b5e, #9333ea);
+        }
+        #quote {
+            margin-top: 25px;
+            font-style: italic;
+            color: #e0aaff;
+            min-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>FROM DARK TO STRONG</h1>
+        <p>Dein Weg zu neuer Stärke – Schritt für Schritt.</p>
+        
+        <button class="btn" onclick="nextStrength()">Kraft-Impuls holen</button>
+        
+        <div id="quote">Klicke auf den Button, um deinen heutigen Impuls zu starten. 🖤💜</div>
+    </div>
+
+    <script>
+        const quotes = [
+            "„Jeder große Schritt beginnt mit dem Mut, im Dunkeln das Licht anzuzünden.“",
+            "„Du bist stärker, als du denkst, und mutiger, als du glaubst.“",
+            "„Aus Schatten wächst die klarste Stärke.“",
+            "„Gib nicht auf. Kleine Fortschritte sind immer noch Fortschritte.“",
+            "„Dein Tempo ist egal – Hauptsache, du bleibst dir treu.“"
+        ];
+
+        function nextStrength() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
